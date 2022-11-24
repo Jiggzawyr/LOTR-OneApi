@@ -1,0 +1,12 @@
+<h2>Chapter</h2>
+
+<h3 *ngIf="!found">Chapter not found!</h3>
+
+<div class="quote-info" *ngIf="chapter">
+    <h3>{{chapter.chapterName}}</h3>
+    <p *ngIf="book"><span class="stat-name">Movie: </span><a [routerLink]="['/book', book._id]">{{book.name}}</a></p>
+</div>
+
+<div>
+    <button (click)="goBack()">Go back</button>
+</div>

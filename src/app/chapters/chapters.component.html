@@ -1,0 +1,21 @@
+<h2>Chapters</h2>
+
+<section class="filter-section">
+    <div class="filter">
+        <label for="chapterNameFilter">Name: </label><br>
+        <input type="text" id="chapterNameFilter" [(ngModel)]="chapterNameFilter">
+    </div>
+    <div class="filter">
+        <button (click)="search()">Search</button>
+    </div>
+</section>
+
+<ul>
+    <li *ngFor="let chapter of chapters">
+        <a routerLink="{{chapter._id}}">{{chapter.chapterName}}</a>
+    </li>
+</ul>
+
+<div>
+    <button (click)="goBack()">Go back</button>
+</div>

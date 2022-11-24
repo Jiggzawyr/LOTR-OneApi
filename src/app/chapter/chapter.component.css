@@ -1,0 +1,8 @@
+.quote-info p {
+    text-indent: 20px;
+    line-height: 0.8rem;
+}
+
+.quote-info .stat-name {
+    font-style: italic;
+}

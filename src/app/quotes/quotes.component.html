@@ -1,0 +1,21 @@
+<h2>Quotes</h2>
+
+<section class="filter-section">
+    <div class="filter">
+        <label for="dialogFilter">Name: </label><br>
+        <input type="text" id="dialogFilter" [(ngModel)]="dialogFilter">
+    </div>
+    <div class="filter">
+        <button (click)="search()">Search</button>
+    </div>
+</section>
+
+<ul>
+    <li *ngFor="let quote of quotes">
+        <a routerLink="{{quote._id}}">{{quote.dialog}}</a>
+    </li>
+</ul>
+
+<div>
+    <button (click)="goBack()">Go back</button>
+</div>

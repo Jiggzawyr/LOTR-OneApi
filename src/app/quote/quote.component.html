@@ -1,0 +1,13 @@
+<h2>Quote</h2>
+
+<h3 *ngIf="!found">Quote not found!</h3>
+
+<div class="quote-info" *ngIf="quote">
+    <h3>{{quote.dialog}}</h3>
+    <p *ngIf="movie"><span class="stat-name">Movie: </span><a [routerLink]="['/movie', movie._id]">{{movie.name}}</a></p>
+    <p *ngIf="character"><span class="stat-name">Character: </span><a [routerLink]="['/character', character._id]">{{character.name}}</a></p>
+</div>
+
+<div>
+    <button (click)="goBack()">Go back</button>
+</div>

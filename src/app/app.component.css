@@ -1,0 +1,23 @@
+h1 {
+    text-align:center;
+}
+
+.logo-container {
+    position: fixed;
+    top: 5px;
+    right: 15px;
+}
+
+.logo-container > img {
+    max-height: 100px;
+}
+
+.ring-container {
+    position: fixed;
+    bottom: 20px;
+    right: 35px;
+}
+
+.ring-container img {
+    max-height: 50px;
+}

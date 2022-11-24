@@ -1,0 +1,11 @@
+<h2>Movies</h2>
+
+<ul>
+    <li *ngFor="let movie of movies">
+        <a routerLink="{{movie._id}}">{{movie.name}}</a>
+    </li>
+</ul>
+
+<div>
+    <button (click)="goBack()">Go back</button>
+</div>

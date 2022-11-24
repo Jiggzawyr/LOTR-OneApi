@@ -1,0 +1,19 @@
+<h2>Book</h2>
+
+<h3 *ngIf="!found">Book not found!</h3>
+
+<div *ngIf="book">
+    <h2>{{book.name}}</h2>
+    <h3>Book has {{chapters.length}} chapters: </h3>
+    <ul>
+        <li *ngFor="let chapter of chapters">
+            {{chapter.chapterName}}
+        </li>
+    </ul>
+</div>
+
+<div>
+    <button (click)="goBack()">Go back</button>
+</div>
+
+

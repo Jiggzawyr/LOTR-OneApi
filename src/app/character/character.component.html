@@ -1,0 +1,33 @@
+<h2>Character</h2>
+
+<h3 *ngIf="!found">Character not found!</h3>
+
+<div class="character-info" *ngIf="character">
+    <h2>{{character.name}}</h2>
+    <p><span class="stat-name">Height: </span>{{character.height}}</p>
+    <p><span class="stat-name">Race: </span>{{character.race}}</p>
+    <p><span class="stat-name">Gender: </span>{{character.gender}}</p>
+    <p><span class="stat-name">Birth: </span>{{character.birth}}</p>
+    <p><span class="stat-name">Spouse: </span>{{character.spouse}}</p>
+    <p><span class="stat-name">Death: </span>{{character.death}}</p>
+    <p><span class="stat-name">Realm: </span>{{character.realm}}</p>
+    <p><span class="stat-name">Hair: </span>{{character.hair}}</p>
+    <p><span class="stat-name">WikiUrl: </span><a href="{{character.wikiUrl}}">{{character.wikiUrl}}</a></p>
+
+    <div *ngIf="quotes.length > 0">
+        <h3>Quotes</h3>
+        <ul>
+            <li *ngFor="let quote of quotes">
+                {{quote.dialog}}
+            </li>
+            <li>
+                <a href="/quote">...more quotes</a>
+            </li>
+        </ul>
+    </div>
+    
+</div>
+
+<div>
+    <button (click)="goBack()">Go back</button>
+</div>

@@ -1,0 +1,32 @@
+<h2>Movie</h2>
+
+<h3 *ngIf="!found">Movie not found!</h3>
+
+<div *ngIf="movie">
+    <h2>{{movie.name}}</h2>
+    <p>Runtime: {{movie.runtimeInMinutes}} minutes</p>
+    <p>Budget: {{movie.budgetInMillions}}M $</p>
+    <p>Box office: {{movie.boxOfficeRevenueInMillions}}M $</p>
+    <p>Academy award nominations: {{movie.academyAwardNominations}}</p>
+    <p>Academy award wins: {{movie.academyAwardWins}}</p>
+    <p>Rotten tomatoes score: {{movie.rottenTomatoesScore}}</p>
+
+    <div *ngIf="quotes.length > 0">
+        <h3>Quotes</h3>
+        <ul>
+            <li *ngFor="let quote of quotes">
+                {{quote.dialog}}
+            </li>
+            <li>
+                <a href="/quote">...more quotes</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+<div>
+    <button (click)="goBack()">Go back</button>
+</div>

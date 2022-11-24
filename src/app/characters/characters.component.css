@@ -1,0 +1,10 @@
+.filter-section {
+    display: flex;
+    align-items: center;
+}
+
+.filter {
+    margin: 1px;
+    display: flex;
+    align-items: center;
+}

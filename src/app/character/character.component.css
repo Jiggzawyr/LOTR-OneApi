@@ -1,0 +1,8 @@
+.character-info p {
+    text-indent: 20px;
+    line-height: 0.8rem;
+}
+
+.character-info .stat-name {
+    font-style: italic;
+}
